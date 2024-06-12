@@ -12,6 +12,7 @@ public class LogicScript : MonoBehaviour
     public Text highScoreText;
     private int highScore;
     public AudioSource audioSource;
+    public AudioClip pointSound;
     private const string toggleKey = "SFXButtonToggled";
 
     private void Start()
@@ -25,6 +26,19 @@ public class LogicScript : MonoBehaviour
     {
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
+        if (playerScore % 5 == 0)
+        {
+            playPointSound();
+        }
+    }
+
+    private void playPointSound()
+    {
+        int musicon = PlayerPrefs.GetInt(toggleKey, 0);
+        if (musicon == 0 && pointSound != null)
+        {
+            audioSource.PlayOneShot(pointSound);
+        }
     }
 
     public void restartGame()
@@ -46,7 +60,6 @@ public class LogicScript : MonoBehaviour
 
     private void checkHighScore()
     {
-        // SprawdŸ, czy obecny wynik jest wiêkszy ni¿ rekordowy
         if (playerScore > highScore)
         {
             highScore = playerScore;

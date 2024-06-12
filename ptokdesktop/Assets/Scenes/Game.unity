@@ -1036,6 +1036,8 @@ MonoBehaviour:
   flapStrength: 25
   logic: {fileID: 2098959783}
   birdIsAlive: 1
+  jumpSound: {fileID: 8300000, guid: c62e553f47bc05d42aa64dbf63e7d1dd, type: 3}
+  audioSource: {fileID: 1614786625}
 --- !u!95 &831129546
 Animator:
   serializedVersion: 5
@@ -3223,6 +3225,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 718104697}
   highScoreText: {fileID: 1216261971}
   audioSource: {fileID: 1614786625}
+  pointSound: {fileID: 8300000, guid: 85fea220c1ce08c4fb6f2f5cac37b456, type: 3}
 --- !u!4 &2098959784
 Transform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,10 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
+    public AudioClip jumpSound;
+    public AudioSource audioSource;
     private Animator animator;
+    private const string toggleKey = "SFXButtonToggled";
 
     void Start()
     {
@@ -20,11 +23,22 @@ public class BirdScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) == true && birdIsAlive == true) 
         {
-            myRigidbody.velocity = Vector2.up * flapStrength;
+            jump();
         }
         if (Input.GetKeyDown(KeyCode.Space) == true && birdIsAlive == true)
         {
-            myRigidbody.velocity = Vector2.up * flapStrength;
+            jump();
+        }
+    }
+
+    public void jump()
+    {
+        myRigidbody.velocity = Vector2.up * flapStrength;
+        int musicon = PlayerPrefs.GetInt(toggleKey, 0);
+
+        if (musicon == 0)
+        {
+            audioSource.PlayOneShot(jumpSound);
         }
     }
 

@@ -13,7 +13,7 @@ public class SFXButton1 : MonoBehaviour
 
         if (musicon == 0)
         {
-            audioSource.volume = 1;
+            audioSource.volume = 0.65f;
             audioSource.Play();
         }
     }
