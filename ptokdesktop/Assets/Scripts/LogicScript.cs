@@ -14,6 +14,7 @@ public class LogicScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip pointSound;
     private const string toggleKey = "SFXButtonToggled";
+    private bool gameOvered = false;
 
     private void Start()
     {
@@ -48,14 +49,18 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
-        int musicon = PlayerPrefs.GetInt(toggleKey, 0);
-        if (musicon == 0)
+        if (!gameOvered)
         {
-            audioSource.volume = 1;
-            audioSource.Play();
+            int musicon = PlayerPrefs.GetInt(toggleKey, 0);
+            if (musicon == 0)
+            {
+                audioSource.volume = 1;
+                audioSource.Play();
+            }
+            gameOvered = true;
+            gameOverScreen.SetActive(true);
+            checkHighScore();
         }
-        gameOverScreen.SetActive(true);
-        checkHighScore();
     }
 
     private void checkHighScore()
