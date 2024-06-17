@@ -5,32 +5,32 @@ using UnityEngine;
 public class PipeSpawnScript : MonoBehaviour
 {
     public GameObject pipe;
-    public float spawnRate = 2;
-    private float timer = 0;
-    public float heightOffset = 10;
+    public float spawnRate = 1.5f;
+    private float nextSpawnTime = 0f;
+    public float heightOffset = 10f;
 
     void Start()
     {
-        spawnPipe();
+        nextSpawnTime = Time.time + spawnRate;
+        SpawnPipe();
     }
 
     void Update()
     {
-        if (timer < spawnRate)
+        if (Time.time >= nextSpawnTime)
         {
-            timer = timer + Time.deltaTime;
-        }
-        else
-        {
-            spawnPipe();
-            timer = 0;
+            SpawnPipe();
+            nextSpawnTime += spawnRate;
         }
     }
-    void spawnPipe()
+
+    void SpawnPipe()
     {
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
+        Vector3 spawnPosition = new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0);
 
-        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+        Debug.Log("Spawning pipe at: " + spawnPosition + " Time: " + Time.time);
+        Instantiate(pipe, spawnPosition, transform.rotation);
     }
 }

@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\LogicScript.cs" />
     <Compile Include="Assets\Scripts\SFXButtonSound.cs" />
     <Compile Include="Assets\Scripts\PipeMiddleScript.cs" />
+    <Compile Include="Assets\Scripts\LineRenderScript.cs" />
+    <Compile Include="Assets\Scripts\MoveTextOnTheMap.cs" />
     <Compile Include="Assets\Scripts\IntroWaitScript.cs" />
     <Compile Include="Assets\Scripts\FideOut.cs" />
     <Compile Include="Assets\Scripts\BackgroundScroller.cs" />
