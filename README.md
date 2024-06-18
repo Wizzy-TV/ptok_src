@@ -4,3 +4,5 @@ THE WEB VERSION OF THE GAME IS HIGHLY CROPPED TO RUN ON ANY DEVICE WHAT SUPPORT 
 The game consists, as long as possible, of flying between pipes without hitting them, that is, quite similar to the popular Flappy Bird.
 
 The betatester's records and mine are hidden on the map next to where we died, try to beat us!
+
+**THIS IS MY FIRST GAME WRITTEN IN UNITY, I MADE IT TO SEE HOWS LOOKING WRITING GAMES ON THIS ENGINE, DON'T EXPECT CYBERPUNK-LIKE GRAPHICS OR GAMEPLAY HERE!**
