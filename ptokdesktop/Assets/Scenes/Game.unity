@@ -457,8 +457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8668ac996ee33c746910652b83728784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 119592382}
-  score: 1
+  targetGameObject: {fileID: 119592382}
+  score: 0
 --- !u!4 &119592385
 Transform:
   m_ObjectHideFlags: 0
@@ -468,7 +468,7 @@ Transform:
   m_GameObject: {fileID: 119592382}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75, y: 0, z: 0}
+  m_LocalPosition: {x: 61.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
