@@ -1,1 +1,1 @@
-https://wizzir.itch.io/ptok
+(Play)[https://wizzir.itch.io/ptok]
